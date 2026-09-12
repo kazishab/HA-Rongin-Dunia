@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<title>HA রঙিন পাঠশালা</title>
+<meta name="description" content="বাচ্চাদের জন্য মজার শেখার অ্যাপ — বাংলা বর্ণমালা, ইংরেজি বর্ণমালা, ফল-ফুল ও সংখ্যা" />
+<meta name="theme-color" content="#FF7A45" />
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png" />
+<link rel="apple-touch-icon" href="icons/icon-180.png" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ===== Splash Screen ===== -->
+<div id="splash">
+  <img class="splash-logo" src="icons/hatech-brand.jpg" alt="HA Tech BD" />
+  <div class="splash-title">HA রঙিন পাঠশালা</div>
+  <div class="splash-sub">মজায় মজায় শেখা</div>
+  <div class="splash-loader"></div>
+  <div class="splash-brand">Built by HA Tech BD</div>
+</div>
+
+<!-- ===== App Shell ===== -->
+<div id="app">
+
+  <header class="app-header">
+    <button class="back-btn" id="backBtn" aria-label="Back">←</button>
+    <div class="header-title" id="headerTitle">HA রঙিন পাঠশালা</div>
+    <div class="score-pill">⭐ <span id="scoreCount">0</span></div>
+  </header>
+
+  <!-- ---- Home Screen ---- -->
+  <section class="screen" id="screen-home">
+    <div class="scroll-area">
+      <div class="hero">
+        <div class="hero-emoji">🌈</div>
+        <h1>HA রঙিন পাঠশালা</h1>
+        <p>বর্ণমালা, ফল-ফুল আর সংখ্যা শিখি মজায় মজায়</p>
+      </div>
+      <div class="cat-grid" id="catGrid"></div>
+    </div>
+  </section>
+
+  <!-- ---- Category Screen ---- -->
+  <section class="screen" id="screen-category">
+    <div class="scroll-area">
+      <div class="hero" style="padding-top:0">
+        <p id="catTitle" style="font-weight:700;opacity:0.6;margin-bottom:0"></p>
+      </div>
+      <div class="quiz-launch">
+        <button class="quiz-btn" id="quizLaunchBtn">🎮 কুইজ খেলি</button>
+      </div>
+      <div class="item-grid" id="itemGrid"></div>
+    </div>
+  </section>
+
+  <!-- ---- Quiz Level Select Screen ---- -->
+  <section class="screen" id="screen-levels">
+    <div class="scroll-area">
+      <div class="hero" style="padding-top:0">
+        <p id="levelsTitle" style="font-weight:700;opacity:0.6;margin-bottom:0"></p>
+      </div>
+      <div class="levels-grid" id="levelsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ---- Quiz Screen ---- -->
+  <section class="screen" id="screen-quiz">
+    <div class="scroll-area" id="quizBody"></div>
+  </section>
+
+  <!-- ---- Detail Overlay ---- -->
+  <div class="detail-overlay" id="detailOverlay">
+    <div class="detail-card" id="detailCard"></div>
+  </div>
+
+  <!-- ---- Quick tap-to-speak toast (instant, non-blocking) ---- -->
+  <div class="quick-toast" id="quickToast">
+    <div class="quick-toast-emoji" id="quickToastEmoji"></div>
+    <div class="quick-toast-word" id="quickToastWord"></div>
+  </div>
+
+  <!-- ---- Exit toast ---- -->
+  <div class="exit-toast" id="exitToast">আবার ব্যাক করুন অ্যাপ বন্ধ করতে</div>
+
+  <footer class="app-footer">Built by HA Tech BD</footer>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
